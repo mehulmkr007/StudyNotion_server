@@ -139,7 +139,7 @@ exports.login = async (req, res) => {
       })
     }
 
-    // Generate JWT token and Compare Password
+    // Generate JWT token and Compare Password3
     if (await bcrypt.compare(password, user.password)) {
       const token = jwt.sign(
         { email: user.email, id: user._id, role: user.role },
